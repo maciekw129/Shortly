@@ -1,0 +1,26 @@
+@use 'variables';
+
+.button {
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    color: variables.$white;
+    background-color: variables.$cyan;
+    transition: opacity 0.2s linear;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 50%;
+        transition: opacity 0.2s linear;
+    }
+
+    &--non-background {
+        background: none;
+        color: variables.$veryDarkViolet;
+        margin-right: 10px;
+    }
+
+    &--small-border-radius {
+        border-radius: 5px;
+    }
+}
