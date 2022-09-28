@@ -6,7 +6,7 @@
 * [Project Status](#project-status)
 ## About
 Web app based on project from Frontend Mentor site:https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G . It's generating short verision of the provided URL. It's using Shrt code API: https://shrtco.de/
-<br/><br/><b>Site is published on: https://shortly-maciekw129.netlify.app/p/</b>
+<br/><br/><b>Site is published on: https://shortly-maciekw129.netlify.app/</b>
 ## Technologies:
 * JavaScript ES6
 * SASS, BEM
