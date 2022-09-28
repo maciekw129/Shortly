@@ -1,0 +1,15 @@
+@use 'variables';
+
+.footer {
+    background-color: variables.$darkViolet;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    @include variables.center-content;
+    flex-direction: column;
+
+
+    &__title {
+        color: variables.$white;
+        margin-bottom: 15px;
+    }
+}
