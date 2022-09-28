@@ -1,0 +1,141 @@
+@use 'variables';
+
+.main {
+    width: 100%;
+    margin-top: 150px;
+    padding-bottom: 100px !important;
+    background-color: variables.$lightGray;
+
+    %same-position {
+        margin-bottom: 25px;
+        transform: translateY(-50%);
+    }
+
+    &__input-wrapper {
+        height: 100px;
+        @extend %same-position;
+        @include variables.center-content;
+        background-color: variables.$darkViolet;
+        border-radius: 5px;
+    }
+
+    &__input {
+        padding: 10px 25px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+        width: 75%;
+    }
+    
+    &__link-item {
+        @extend %same-position;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: variables.$white;
+        margin-bottom: 15px;
+        padding: 20px;
+
+        & p {
+            padding: 0;
+            color: variables.$veryDarkViolet;
+        }
+    }
+
+    &__short-link {
+        margin-right: 15px;
+        color: variables.$cyan;
+    }
+
+    &__text-container {
+        margin: 0 auto;
+        margin-top: 150px;
+        text-align: center;
+    }
+
+    &__box-container {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 50px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            z-index: 0;
+            background-color: variables.$cyan;
+        }
+    }
+
+    &__box {
+        padding: 70px 20px 20px 50px;
+        background-color: variables.$white;
+        border-radius: 5px;
+        z-index: 99;
+        position: relative;
+
+        &--middle {
+            margin: 0 25px;
+        }
+
+        &:nth-child(2) {
+            margin-top: 25px;
+        }
+
+        &:nth-child(3) {
+            margin-top: 50px;
+        }
+    }
+
+    &__box-title {
+        margin-bottom: 10px;
+    }
+
+    &__box-icon-wrapper {
+        @include variables.center-content;
+        position: absolute;
+        background-color: variables.$darkViolet;
+        height: 70px;
+        width: 70px;
+        border-radius: 50px;
+        top: -37.5px;
+        left: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .main {
+        &__input-wrapper {
+            flex-direction: column;
+            height: 150px;
+        }
+
+        &__input {
+            margin-bottom: 20px;
+        }
+
+        &__box-container {
+            flex-direction: column;
+
+            &::before {
+                transform: rotate(90deg);
+            }
+        }
+
+        &__box {
+            margin-top: 50px !important;
+
+            &--middle {
+                margin: 0;
+            }
+        }
+
+        &__box-icon-wrapper {
+            left: calc(50% - 35px);
+        }
+    }
+}
