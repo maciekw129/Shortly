@@ -4,11 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <div>
-        <h1>hello</h1>
-    </div>
+    <header class="header main-container">
+        <div class="header__section">
+            <h2 class="header__title">Shortly</h2>
+        </div>
+        <div class="header__section">
+            <button class="button button--non-background">Login</button>
+            <button class="button">Sign Up</button>
+        </div>
+    </header>
+
+    <section class="hero main-container">
+        <article class="hero__text-content">
+            <h1 class="hero__title">More than just shorter links</h1>
+            <p class="hero__text text">Build your brand's recognition and get detailed insights on how your links are performing</p>
+            <button class="button">Get Started</button>
+        </article>
+        <div class="hero__image-wrapper">
+            <img src="./illustration-working.svg" />
+        </div>
+    </section>
+
+    <main class="main main-container">
+        <form class="main__input-wrapper">
+            <input 
+                class="main__input"
+                required
+                type="url"
+                placeholder="Shorten a link here..."
+            />
+            <button class="main__button button button--small-border-radius" type="submit">Shorten it!</button>
+        </form>
+        <ul class="main__links-container">
+            <!--Here goes fetched links-->
+        </ul>
+        <article class="main__text-container">
+            <h2 class="main__title">Advanced Statistics</h2>
+            <p class="main__text">Track how your links are performing across the web with our advanced statistics dashboard</p>
+        </article>
+        <div class="main__box-container">
+            <div class="main__box">
+                <h2 class="main__box-title">Brand Recognition</h2>
+                <p>Boost your brand recognition with each click. Generic links dont't mean a thing. Branded links help instil confidence in your content.</p>
+                <div class="main__box-icon-wrapper">
+                    <img class="main__box-icon" src="./icon-brand-recognition.svg" />
+                </div>
+            </div>
+            <div class="main__box main__box--middle">
+                <h2 class="main__box-title">Detailed Records</h2>
+                <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+                <div class="main__box-icon-wrapper">
+                    <img class="main__box-icon" src="./icon-detailed-records.svg" />
+                </div>
+            </div>
+            <div class="main__box">
+                <h2 class="main__box-title">Fully Customizable</h2>
+                <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+                <div class="main__box-icon-wrapper">
+                    <img class="main__box-icon" src="./icon-fully-customizable.svg" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-container footer">
+        <h2 class="footer__title">Boost your links today</h2>
+        <button class="button">Get Started</button>
+    </footer>
 </body>
 </html>
