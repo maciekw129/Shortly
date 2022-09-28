@@ -1,0 +1,31 @@
+@use 'variables';
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    &__navigation, &__section {
+       @include variables.center-content;
+    }
+
+    &__title {
+        margin-right: 20px;
+        color: variables.$veryDarkBlue;
+    }
+
+    &__navigation-item {
+        margin: 0 20px;
+        color: variables.$grayishViolet;
+        text-decoration: none;
+        transition: color 0.2s linear;
+        font-size: 0.9rem;
+        
+        &:hover {
+            color: variables.$veryDarkBlue;
+            cursor: pointer;
+            transition: color 0.2s linear;
+        }
+    }
+}
