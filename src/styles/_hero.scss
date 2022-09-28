@@ -1,0 +1,45 @@
+@use 'variables';
+
+.hero {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    &__text-content {
+        width: 50%;
+    }
+
+    &__title {
+        font-size: variables.$bigFont;
+    }
+
+    &__image-wrapper {
+        @include variables.center-content;
+        width: 40%;
+
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+
+        &__title {
+            text-align: center;
+        }
+
+        &__text-content {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 80%;
+        }
+
+        &__image-wrapper {
+            width: 70%;
+        }
+    }
+}
