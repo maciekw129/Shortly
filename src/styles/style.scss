@@ -1,0 +1,38 @@
+@use 'variables';
+@use 'header';
+@use 'button';
+@use 'hero';
+@use 'main';
+@use 'footer';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-container {
+    padding: 0 100px;
+    max-width: 1500px;
+    width: 100%;
+}
+
+p {
+    color: variables.$grayishViolet;
+    padding-bottom: 25px;
+}
+
+@media only screen and (max-width: 900px) {
+    .main-container {
+        padding: 0 25px;
+    }
+}
